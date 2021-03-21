@@ -32,12 +32,46 @@
             <div class="panel panel-default">
               <div class="panel-heading">Filter Search</div>
               <div class="panel-body">
-                <form>
+                <form id='form'>
                   <div class="form-group">
                     <ul class="list-group" id="filters">
                       <li class="filter list-group-item">
                         <label for="date">Enter a Date</label>
                         <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="cite">Enter a City</label>
+                        <input class="form-control" id="city" type="text" placeholder="benton">
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="state">Pick a State</label>
+                        <select class="form-control" id="state">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="country">Pick a Country</label>
+                        <select class="form-control" id="country">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="shape">Pick a Shape</label>
+                        <select class="form-control" id="shape">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
                       </li>
                     </ul>
                   </div>
@@ -71,6 +105,7 @@
       <span class="bottom">UFO Sightings</span>
     </footer>
   </div>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
   <script src="static/js/data.js"></script>
   <script src="static/js/app.js"></script>

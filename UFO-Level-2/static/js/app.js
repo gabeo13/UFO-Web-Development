@@ -44,7 +44,7 @@ function runFilter() {
     console.log(inputArray);
     console.log(tableData);
 
-    // Assign filted data to a variable
+    // Assign filtered data to a variable
     var filteredData = tableData.filter(ufo => (ufo.datetime == inputValue1 && ufo.city == inputValue2 && ufo.state == inputValue3 && ufo.country == inputValue4 && ufo.shape == inputValue5));
 
     // Console log filtered data to ensure the filter worked

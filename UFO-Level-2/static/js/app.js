@@ -35,17 +35,17 @@ function runFilter() {
     var inputValue5 = inputElement5.property("value");
 
     var inputArray = [{ key: 'datetime', value: inputValue1 },
-    { key: 'city', value: inputValue1 },
-    { key: 'state', value: inputValue1 },
-    { key: 'country', value: inputValue1 },
-    { key: 'shape', value: inputValue1 }]
+    { key: 'city', value: inputValue2 },
+    { key: 'state', value: inputValue3 },
+    { key: 'country', value: inputValue4 },
+    { key: 'shape', value: inputValue5 }]
 
     // Console log variables stepwise to ensure functionality
     console.log(inputArray);
     console.log(tableData);
 
     // Assign filted data to a variable
-    var filteredData = tableData.filter(ufo => ufo.key === inputArray.value);
+    var filteredData = tableData.filter(ufo => (ufo.datetime == inputValue1 && ufo.city == inputValue2 && ufo.state == inputValue3 && ufo.country == inputValue4 && ufo.shape == inputValue5));
 
     // Console log filtered data to ensure the filter worked
     console.log(filteredData);

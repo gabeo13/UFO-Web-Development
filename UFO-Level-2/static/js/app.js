@@ -44,8 +44,36 @@ function runFilter() {
     console.log(inputArray);
     console.log(tableData);
 
-    // Assign filtered data to a variable
-    var filteredData = tableData.filter(ufo => (ufo.datetime == inputValue1 && ufo.city == inputValue2 && ufo.state == inputValue3 && ufo.country == inputValue4 && ufo.shape == inputValue5));
+    // Filter all inputs and and assign to array
+    var filteredData = [];
+
+    for (var i = 0; i < tableData.length; i++) {
+        inputDate = inputValue1.toLowerCase()
+        inputCity = inputValue2.toLowerCase()
+        inputState = inputValue3.toLowerCase()
+        inputCountry = inputValue4.toLowerCase()
+        inputShape = inputValue5.toLowerCase()
+        var datetime = tableData[i].datetime.toLowerCase()
+        var city = tableData[i].city.toLowerCase()
+        var state = tableData[i].state.toLowerCase()
+        var country = tableData[i].country.toLowerCase()
+        var shape = tableData[i].shape.toLowerCase()
+
+        if (datetime.includes(inputDate)) {
+            filteredData.push(tableData[i])
+        } else if (city.includes(inputCity)) {
+            filteredData.push(tableData[i])
+        } else if (state.includes(inputState)) {
+            filteredData.push(tableData[i])
+        } else if (country.includes(inputCountry)) {
+            filteredData.push(tableData[i])
+        } else if (shape.includes(inputShape)) {
+            filteredData.push(tableData[i])
+        }
+
+    };
+
+    // var filteredData = tableData.filter(ufo => (ufo.datetime == inputValue1 && ufo.city == inputValue2 && ufo.state == inputValue3 && ufo.country == inputValue4 && ufo.shape == inputValue5));
 
     // Console log filtered data to ensure the filter worked
     console.log(filteredData);

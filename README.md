@@ -11,9 +11,29 @@ Write code that will create a table dynamically based upon a sourced UFO dataset
 
 ---
 ## Development Toolkit
+* JavaScript
+* d3.js
+* HTML
+* CSS
 
 ---
 ## Operating Instructions
 
+>Clone repository, maintaing directory state
+
+>Open index.html through preferred browser (i.e Chrome)
+
+>Recommend review of data.js for variable values for filtering
+
+>UFO-Level-1 Will Only filter on data (M/DD/YYYY)
+
+>UFO-Level-2 Will filter on several string fields
+
+>Page must be refreshed in between filter sessions
+
 ---
 ## Application Screenshots
+
+![](Images/app1.png)
+
+![](Images/app2.png)

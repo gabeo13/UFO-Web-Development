@@ -18,7 +18,9 @@ form.on("submit", runFilter);
 function runFilter() {
 
     // Prevent the page from refreshing
-    // d3.event.preventDefault();
+    d3.event.preventDefault();
+
+    // Need a way to clear table each submission
 
     // Select the input elements and get the raw HTML node
     var inputElement1 = d3.select("#datetime");
@@ -103,4 +105,5 @@ function runFilter() {
             cell.text(value);
         });
     });
+
 };

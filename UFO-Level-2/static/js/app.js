@@ -18,7 +18,7 @@ form.on("submit", runFilter);
 function runFilter() {
 
     // Prevent the page from refreshing
-    d3.event.preventDefault();
+    // d3.event.preventDefault();
 
     // Select the input elements and get the raw HTML node
     var inputElement1 = d3.select("#datetime");
@@ -59,17 +59,34 @@ function runFilter() {
         var country = tableData[i].country.toLowerCase()
         var shape = tableData[i].shape.toLowerCase()
 
-        if (datetime.includes(inputDate)) {
+        if (datetime.includes(inputDate) && city.includes(inputCity) && state.includes(inputState) && country.includes(inputCountry) && shape.includes(inputShape)) {
             filteredData.push(tableData[i])
-        } else if (city.includes(inputCity)) {
-            filteredData.push(tableData[i])
-        } else if (state.includes(inputState)) {
-            filteredData.push(tableData[i])
-        } else if (country.includes(inputCountry)) {
-            filteredData.push(tableData[i])
-        } else if (shape.includes(inputShape)) {
-            filteredData.push(tableData[i])
-        }
+        };
+
+        // if (city.includes(inputCity)) {
+        //     filteredData.push(tableData[i])
+        // }
+        // if (state.includes(inputState)) {
+        //     filteredData.push(tableData[i])
+        // }
+        // if (country.includes(inputCountry)) {
+        //     filteredData.push(tableData[i])
+        // }
+        // if (shape.includes(inputShape)) {
+        //     filteredData.push(tableData[i])
+        // }
+
+        // if (datetime.includes(inputDate)) {
+        //     filteredData.push(tableData[i])
+        // } else if (city.includes(inputCity)) {
+        //     filteredData.push(tableData[i])
+        // } else if (state.includes(inputState)) {
+        //     filteredData.push(tableData[i])
+        // } else if (country.includes(inputCountry)) {
+        //     filteredData.push(tableData[i])
+        // } else if (shape.includes(inputShape)) {
+        //     filteredData.push(tableData[i])
+        // }
 
     };
 

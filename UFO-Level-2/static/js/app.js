@@ -20,7 +20,8 @@ function runFilter() {
     // Prevent the page from refreshing
     d3.event.preventDefault();
 
-    // Need a way to clear table each submission
+    // Clear table body
+    d3.select('tbody').html('');
 
     // Select the input elements and get the raw HTML node
     var inputElement1 = d3.select("#datetime");
@@ -36,6 +37,7 @@ function runFilter() {
     var inputValue4 = inputElement4.property("value");
     var inputValue5 = inputElement5.property("value");
 
+    // Construct array 
     var inputArray = [{ key: 'datetime', value: inputValue1 },
     { key: 'city', value: inputValue2 },
     { key: 'state', value: inputValue3 },
@@ -65,34 +67,7 @@ function runFilter() {
             filteredData.push(tableData[i])
         };
 
-        // if (city.includes(inputCity)) {
-        //     filteredData.push(tableData[i])
-        // }
-        // if (state.includes(inputState)) {
-        //     filteredData.push(tableData[i])
-        // }
-        // if (country.includes(inputCountry)) {
-        //     filteredData.push(tableData[i])
-        // }
-        // if (shape.includes(inputShape)) {
-        //     filteredData.push(tableData[i])
-        // }
-
-        // if (datetime.includes(inputDate)) {
-        //     filteredData.push(tableData[i])
-        // } else if (city.includes(inputCity)) {
-        //     filteredData.push(tableData[i])
-        // } else if (state.includes(inputState)) {
-        //     filteredData.push(tableData[i])
-        // } else if (country.includes(inputCountry)) {
-        //     filteredData.push(tableData[i])
-        // } else if (shape.includes(inputShape)) {
-        //     filteredData.push(tableData[i])
-        // }
-
     };
-
-    // var filteredData = tableData.filter(ufo => (ufo.datetime == inputValue1 && ufo.city == inputValue2 && ufo.state == inputValue3 && ufo.country == inputValue4 && ufo.shape == inputValue5));
 
     // Console log filtered data to ensure the filter worked
     console.log(filteredData);

@@ -29,8 +29,6 @@ Write code that will create a table dynamically based upon a sourced UFO dataset
 
 >UFO-Level-2 Will filter on several string fields
 
->Page must be refreshed in between filter sessions
-
 ---
 ## Application Screenshots
 
